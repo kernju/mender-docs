@@ -204,6 +204,11 @@ followed by *Enter*.
 
 This downloads the Mender client on the device, configures and starts it.
 
+!!! If you are not using the custom Raspberry Pi OS, you may encounter errors like 
+`mender: error while loading shared libraries: libffi.so.6: cannot open shared object file: No such file or directory`
+!!! In that case, a symbolic link should resolve the problem, for instance :
+!!! `sudo ln -s /usr/lib/arm-linux-gnueabihf/libffi.so.7 /usr/lib/arm-linux-gnueabihf/libffi.so.6`
+
 ## Step 7 - Accept the device
 
 Once the client has started, the Mender client will attempt to connect to the
